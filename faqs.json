@@ -1,0 +1,62 @@
+[
+  {
+    "question": "What is this FAQ chatbot?",
+    "alternatives": ["What can this chatbot do?", "Tell me about the chatbot"],
+    "answer": "This is an FAQ chatbot that answers frequently asked questions using NLP preprocessing and TF-IDF cosine similarity."
+  },
+  {
+    "question": "How does the chatbot find an answer?",
+    "alternatives": ["How does question matching work?", "How do you understand my question?"],
+    "answer": "The chatbot cleans and stems the question, converts it into TF-IDF features, and compares it with stored FAQ questions using cosine similarity. It returns the answer for the closest match when the similarity is high enough."
+  },
+  {
+    "question": "What is NLP?",
+    "alternatives": ["Define natural language processing", "What does NLP mean?"],
+    "answer": "Natural Language Processing (NLP) is a field of computing that helps computers process and understand human language."
+  },
+  {
+    "question": "What is text preprocessing?",
+    "alternatives": ["Why do you clean text?", "Explain text cleaning"],
+    "answer": "Text preprocessing prepares text for analysis. This project converts text to lowercase, removes punctuation, tokenizes words, removes common stopwords, and applies stemming."
+  },
+  {
+    "question": "What is tokenization?",
+    "alternatives": ["What does tokenize mean?", "How are words split?"],
+    "answer": "Tokenization is the process of splitting text into smaller units, usually words. For example, 'How are you?' becomes the tokens 'How', 'are', and 'you'."
+  },
+  {
+    "question": "What are stopwords?",
+    "alternatives": ["Why remove common words?", "Give examples of stop words"],
+    "answer": "Stopwords are common words such as 'the', 'is', and 'and' that often add little value to question matching. This project removes a small built-in list of them."
+  },
+  {
+    "question": "What is stemming?",
+    "alternatives": ["Why is Porter Stemmer used?", "Explain word stemming"],
+    "answer": "Stemming reduces related words to a common root-like form. This project uses NLTK's PorterStemmer; for example, words such as 'connecting' and 'connected' may be reduced to a shared stem."
+  },
+  {
+    "question": "What is TF-IDF?",
+    "alternatives": ["Explain term frequency inverse document frequency", "Why use TF-IDF?"],
+    "answer": "TF-IDF stands for Term Frequency-Inverse Document Frequency. It gives higher weight to words that are useful for distinguishing one question from the others."
+  },
+  {
+    "question": "What is cosine similarity?",
+    "alternatives": ["How do you measure similarity?", "How are two questions compared?"],
+    "answer": "Cosine similarity measures how similar two vectors are by comparing the angle between them. A score closer to 1 indicates a stronger match."
+  },
+  {
+    "question": "Can I add my own FAQs?",
+    "alternatives": ["How to add questions and answers?", "Can I edit the FAQ data?"],
+    "answer": "Yes. Open faqs.json and add another object containing a question, an answer, and optionally an alternatives list. Save the file and restart the Flask application."
+  },
+  {
+    "question": "What should I do if the chatbot does not understand?",
+    "alternatives": ["Why is there no matching answer?", "What if my question is not found?"],
+    "answer": "Try using different or simpler wording. If the question is not covered, add it to faqs.json with its answer and possible alternative phrasings."
+  },
+  {
+    "question": "Which technologies are used in this project?",
+    "alternatives": ["What tools are used?", "Which libraries are required?"],
+    "answer": "The project uses Python, Flask, NLTK PorterStemmer, scikit-learn TF-IDF vectorization, cosine similarity, JSON for FAQ storage, and HTML, CSS, and JavaScript for the chat interface."
+  }
+]
